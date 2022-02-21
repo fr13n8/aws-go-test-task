@@ -1,0 +1,27 @@
+service: myservice
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: go1.x
+  httpApi:
+    cors: true
+
+package:
+  patterns:
+    - '!./**'
+    - ./bin/**
+
+functions:
+  distance:
+    handler: bin/distance
+    events:
+      - httpApi:
+          path: /distance
+          method: post
+  area:
+    handler: bin/area
+    events:
+      - httpApi:
+          path: /area
+          method: post

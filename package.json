@@ -1,0 +1,7 @@
+{
+  "name": "aws-golang-http-endpoint",
+  "version": "0.0.1",
+  "description": "Points calculations api",
+  "author": "efr13nd",
+  "license": "MIT"
+}
